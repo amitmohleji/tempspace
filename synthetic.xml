@@ -1,0 +1,16 @@
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+
+    
+    <type type="xlrelease.VariableSummaryTile" label="Release Variable Summary" extends="xlrelease.Tile" >
+        <property name="uri" hidden="true" default="xlrelease/VariableSummaryTile/variable-summary-tile-summary.html" />
+        <property name="title" description="Tile title" default="Release Variable Summary" />
+        <property name="cacheEnabled" kind="boolean" hidden="true" default="false" description="True if tile data should be cached."/>
+        <property name="variables" kind="list_of_string" category="input" required="true" description="List Variables you want to print"/>
+
+    </type>
+
+    
+</synthetic>

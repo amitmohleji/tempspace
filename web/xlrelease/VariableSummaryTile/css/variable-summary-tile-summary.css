@@ -1,0 +1,20 @@
+
+td.null{
+  background-color: grey;
+}
+td.FAILED{
+  background-color: red;
+}
+td.COMPLETED{
+  background-color: green;
+}
+td.UNSTABLE{
+  background-color: red;
+}
+td.SUCCESS{
+  background-color: #68B749 !important;
+}
+td.IN_PROGRESS{
+  background-color: yellow;
+}
+
