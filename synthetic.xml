@@ -12,5 +12,12 @@
 
     </type>
 
-    
+    <type type="jira.CaptureCodeBranchList" extends="jira.JiraScript">
+        <property name="jiraIssuesMap" kind="map_string_string" category="input"/>
+        <property name="featureBranchList" kind="list_of_string" category="output" />
+    </type>
+    <type type="jira.CaptureJIRAIssueIds" extends="jira.JiraScript">
+        <property name="query" kind="string" category="input"/>
+        <property name="issues" kind="map_string_string" category="output" />
+    </type>    
 </synthetic>
