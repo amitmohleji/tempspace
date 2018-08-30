@@ -258,7 +258,7 @@ class JiraServer:
         content = {
             'jql': query,
             'startAt': 0,
-            'fields': ['id', 'summary'],
+            'fields': ['summary'],
             'maxResults': 1000
         }
 
@@ -273,7 +273,7 @@ class JiraServer:
             issues = {}
             for item in data['issues']:
                 issue = item['key']
-                issues[issue] = item['fields']['id']
+                issues[issue] = item['id']
                 print u"* {0} - {1}".format(self._link(issue), item['fields']['summary'])
             print "\n"
             return issues
@@ -289,7 +289,7 @@ class JiraServer:
             response = request.get(codeBranchUrl % item, contentType='application/json')
             if response.status == 200:
                 data = Json.loads(response.response)
-                    for branch in data['branches']:
-                        featureList.append(branch['name'])
+                for branch in data['detail'][0]['branches']:
+                    featureList.append(branch['name'])
         return featureList
 
